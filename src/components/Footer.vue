@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer has-background-light is-relative">
+  <footer class="footer has-background-dark has-text-light is-relative section">
     <div class="container">
       <div class="content">
         <div class="columns">
@@ -11,6 +11,28 @@
           </div>
         </div>
       </div>
+
+      <!-- Copy Right -->
+      <p class="has-text-centered">
+        <font-awesome-icon icon="copyright" class="fa-fw" /> Copyright <router-link to="/" class="has-text-light">Outraverse</router-link> {{ copyRightYear }}
+      </p>
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  name: "Footer",
+  computed: {
+    copyRightYear() {
+      const start = 2022;
+      let currentYear = new Date().getFullYear();
+      let temp = `${start}`;
+      if (currentYear > start) {
+        temp += ` - ${currentYear}`
+      }
+      return temp;
+    }
+  }
+}
+</script>
