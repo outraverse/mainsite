@@ -23,6 +23,8 @@ export default {
 
 <style lang="scss">
 @import "bulma";
+@import "@/assets/styles/app.scss";
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

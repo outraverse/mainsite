@@ -14,7 +14,7 @@
 
       <!-- Copy Right -->
       <p class="has-text-centered">
-        <font-awesome-icon icon="copyright" class="fa-fw" /> Copyright <router-link to="/" class="has-text-light">Outraverse</router-link> {{ copyRightYear }}
+        <font-awesome-icon icon="copyright" class="fa-fw" /> Copyright <router-link to="/" class="copyright-link animted-underline has-text-light">Outraverse</router-link> {{ copyRightYear }}
       </p>
     </div>
   </footer>
@@ -36,3 +36,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+@import "@/assets/styles/colors.scss";
+
+.copyright-link {  
+  background-image: linear-gradient($color-light 0 0);
+}
+</style>
