@@ -5,9 +5,19 @@
         leave-active-class="animate__animated animate__fadeOutLeft"
     >
       <div class="menu-overlay" :class="{'is-active': isSideMenuOpen}">
-        <section class="section my-6">
+        <section class="section is-large">
           <div class="container">
-            <h2>Navigation</h2>
+            <h2 class="has-text-weight-bold is-size-3">Navigation</h2>
+            <div class="py-3">
+              <p v-for="u in listUrls" :key="u.name" class="is-capitalized is-size-5">
+                <a v-if="u.ext" class="has-text-light" :href="u.url" target="_blank">
+                  {{ u.name }}
+                </a>
+                <router-link v-else class="has-text-light" :to="u.url" target="_blank">
+                  {{ u.name }}
+                </router-link>
+              </p>
+            </div>
           </div>
         </section>
       </div>
@@ -21,6 +31,9 @@ export default {
   computed: {
     isSideMenuOpen() {
       return this.$store.state.show.SideMenu
+    },
+    listUrls() {
+      return this.$store.state.links.Menu
     }
   }
 }
