@@ -103,16 +103,22 @@
         </div>
       </div>
     </section>
+
+    <section id="contact-us" class="section is-medium has-background-light">
+      <Contact />
+    </section>
   </div>
 </template>
 
 <script>
 import Hero from "@/components/Hero";
 import ServiceCard from  "@/components/ServiceCard";
+import Contact from "@/components/Contact";
 
 export default {
   name: "Home",
   components: {
+    Contact,
     Hero,
     ServiceCard
   },

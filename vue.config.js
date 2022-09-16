@@ -7,7 +7,7 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      "/api": {
+      "/mail": {
         target: "http://localhost:5000",
         ws: true,
         changeOrigin: true
